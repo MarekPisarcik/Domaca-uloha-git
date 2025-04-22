@@ -1,0 +1,31 @@
+data = [
+    ("sabaton", "power_metal", "Sweden"),
+    ("nightwish", "symphonic_metal", "Finland"),
+    ("slipknot", "groove_metal", "USA")
+]
+
+# vypisanie menu
+def print_menu():
+    print("""
+    ------------MAIN MENU-----------
+        1- Pridat novy zaznam
+        2- Zobrazit existujuce zaznamy
+        3- Vyhladat zaznam podla klucoveho slova
+        4- Ukoncit aplikaciu
+    """)
+
+# pridat novy zaznam
+
+def add_entry(data):
+    kapela = input("kapela: ")
+    zaner = input("zaner: ")
+    krajina = input("krajina: ")
+
+    nova_kapela = (kapela, zaner, krajina)
+    data.append(nova_kapela)
+    return data
+
+
+# zobrazenie existujucich zaznamov
+def actual_data(data):
+    print(data)
